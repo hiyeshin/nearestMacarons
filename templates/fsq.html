@@ -1,0 +1,33 @@
+{% extends "layout/main.html" %}
+
+{% block body %}
+<h2> Foursquare badge finding API</h2>
+<p> with some Google Geocode API too. </p>
+
+<hr>
+
+<div class = "row">
+	<div class = "span6">
+		<label for = "user_address"> step 1. Looking up Lat/Lon for an address or zipcode. </label>
+		<input type = "text" id = "user_address" name = "user_address" value = "113 Maujser st, Brooklyn, NY">
+		<br>
+		<imput type = "button" id = "locate_button" class = "btn" value = "Locate" >		
+	</div>
+
+	<div class = "span6">
+		<<form method = "POST">
+			<label for = "user_address"> step 2. Send Latitude and Longitude to search </label>
+			<input type = "text" id = "user_latlng" name = "user_latlng" size = "40"> <br>
+			<input type = "submit" id = "search_button" class = "btn" value = "search 4SQ" disabled = disabled >
+		</form>
+	</div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script type = "text/javascript" src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAQsmkT26JbAduQgEDzrtBaIjStLou_z3c&sensor=false"></script>
+<script type = "text/javascript" src = "static/js/geocoder.js"></script>
+
+{% endblock%}
