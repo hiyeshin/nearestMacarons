@@ -1,22 +1,22 @@
 {% extends "layout/main.html" %}
 
 {% block body %}
-<h2> Foursquare badge finding API</h2>
-<p> with some Google Geocode API too. </p>
+<h3> <i> Just because I love macarons. </i> </h3>
+
+<br />
 
 <hr>
 
 <div class = "row">
 	<div class = "span6">
-		<label for = "user_address"> step 1. Looking up Lat/Lon for an address or zipcode. </label>
-		<input type = "text" id = "user_address" name = "user_address" value = "113 Maujser st, Brooklyn, NY">
-		<br>
-		<imput type = "button" id = "locate_button" class = "btn" value = "Locate" >		
+		<label for = "user_address"> Where are you now? </label>
+		<input type = "text" id = "user_address" name = "user_address" value = "721 Broadway, New York, NY"> <br>
+		<input type = "button" id = "locate_button" class = "btn" value = "Locate" >		
 	</div>
 
 	<div class = "span6">
-		<<form method = "POST">
-			<label for = "user_address"> step 2. Send Latitude and Longitude to search </label>
+		<form method = "POST">
+			<label for = "user_latlng"> Nearest macarons vendors: </label>
 			<input type = "text" id = "user_latlng" name = "user_latlng" size = "40"> <br>
 			<input type = "submit" id = "search_button" class = "btn" value = "search 4SQ" disabled = disabled >
 		</form>

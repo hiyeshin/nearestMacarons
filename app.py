@@ -6,16 +6,16 @@ from unidecode import unidecode
 from flask import Flask, request, render_template, redirect, abort, jsonify
 import requests
 
-# from twilio.rest import TwilioRestClient
-
 app = Flask(__name__)
 
 
-# @app.route('/')
-# def main():
-# 	return render_template('index.html')
+# access tokens allow apps to make rewquests to foursquare on the behalf of a user. 
+# each access token is unique to the user and consumer key
+
+# some of the endpoints do not require the specific user information, such as venue search. 
 
 @app.route("/", methods = ['GET', 'POST'])
+
 def fsqdemo():
 	if request.method == "GET":
 		return render_template('fsq.html')
@@ -30,7 +30,10 @@ def fsqdemo():
 		fsq_query = {
 			'client_id': os.environ.get('FOURSQUARE_CLIENT_ID'),
 			'client_secret': os.environ.get('FOURSQUARE_CLIENT_SECRET'),
-			'v': '20121113' # this saves the date data, whichi is nice thing about foursquare
+			'v': '20121116',
+			'query': 'macaron' # this saves the date data, whichi is nice thing about foursquare
+			# v means version. 
+			# v = YYYYMMDD
 		}
 
 		results = requests.get(fsq_url, params = fsq_query)

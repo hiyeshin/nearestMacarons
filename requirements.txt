@@ -3,4 +3,4 @@ Mongoengine==0.7.5
 unidecode
 Flask-mongoengine
 twilio
-requests
+requests==0.14.1
