@@ -1,7 +1,7 @@
 var geocoder;
 var google_location;
 
-jQuery(document).ready(function(){
+jQuery(document).ready( function(){
 	geocoder = new google.maps.Geocoder();
 	jQuery('#locate_button').click(codeAddress);
 
@@ -11,7 +11,7 @@ var codeAddress = function(){
 	var address = jQuery('#user_address').val();
 	geocoder.geocode( { 'address': address}, function (results, status){
 		if (status == google.maps.GeocoderStatus.OK){
-			console.log("received geo info from GOogle");
+			console.log("received geo info from Google");
 			console.log(results);
 			console.log(results[0].geometry.location);
 

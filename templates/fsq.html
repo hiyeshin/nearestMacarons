@@ -16,7 +16,7 @@
 
 	<div class = "span6">
 		<form method = "POST">
-			<label for = "user_latlng"> Nearest macarons vendors: </label>
+			<label for = "user_address"> Nearest macarons vendors: </label>
 			<input type = "text" id = "user_latlng" name = "user_latlng" size = "40"> <br>
 			<input type = "submit" id = "search_button" class = "btn" value = "search 4SQ" disabled = disabled >
 		</form>
@@ -28,6 +28,7 @@
 {% block scripts %}
 
 <script type = "text/javascript" src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAQsmkT26JbAduQgEDzrtBaIjStLou_z3c&sensor=false"></script>
+
 <script type = "text/javascript" src = "static/js/geocoder.js"></script>
 
 {% endblock%}

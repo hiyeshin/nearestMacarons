@@ -31,7 +31,8 @@ def fsqdemo():
 			'client_id': os.environ.get('FOURSQUARE_CLIENT_ID'),
 			'client_secret': os.environ.get('FOURSQUARE_CLIENT_SECRET'),
 			'v': '20121116',
-			'query': 'macaron' # this saves the date data, whichi is nice thing about foursquare
+			'query': 'macaron',
+			'll': user_latlng # this saves the date data, whichi is nice thing about foursquare
 			# v means version. 
 			# v = YYYYMMDD
 		}
@@ -50,7 +51,7 @@ def fsqdemo():
 			return jsonify(results.json['response'])
 
 		else:
-			return "something went wrong on line 50 %s " % results.json
+			return "Oops, something went wrong %s " % results.json
 
 
 @app.errorhandler(404)
