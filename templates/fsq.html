@@ -9,17 +9,19 @@
 
 <div class = "row">
 	<div class = "span6">
-		<label for = "user_address"> Where are you now? </label>
+		<label for = "user_address"> Where am I now? </label>
 		<input type = "text" id = "user_address" name = "user_address" value = "721 Broadway, New York, NY"> <br>
-		<input type = "button" id = "locate_button" class = "btn" value = "Locate" >		
+		<input type = "button" id = "locate_button" class = "btn" value = "Latitude / Longitude" >		
 	</div>
 
 	<div class = "span6">
 		<form method = "POST">
-			<label for = "user_address"> Nearest macarons vendors: </label>
+			<label for = "user_address"> Find my nearest macarons: </label>
 			<input type = "text" id = "user_latlng" name = "user_latlng" size = "40"> <br>
 			<input type = "submit" id = "search_button" class = "btn" value = "JSON format" disabled = disabled >
+			<!-- <input type = "submit" id = "map_button" class = "btn" value = "Show me the map" > -->
 		</form>
+
 	</div>
 </div>
 
@@ -31,4 +33,4 @@
 
 <script type = "text/javascript" src = "static/js/geocoder.js"></script>
 
-{% endblock%}
+{% endblock %}

@@ -12,7 +12,7 @@ foursquare.start = function() {
     foursquare.params = {
         client_id: foursquare.settings.client_id,
         client_secret: foursquare.settings.client_secret,
-        v: '20120530',
+        v: '20121119',
         callback: 'callback'
     };
     foursquare.geocoder();

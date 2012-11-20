@@ -30,7 +30,7 @@ def fsqdemo():
 		fsq_query = {
 			'client_id': os.environ.get('FOURSQUARE_CLIENT_ID'),
 			'client_secret': os.environ.get('FOURSQUARE_CLIENT_SECRET'),
-			'v': '20121116',
+			'v': '20121118',
 			'query': 'macaron',
 			'll': user_latlng # this saves the date data, whichi is nice thing about foursquare
 			# v means version. 
@@ -62,9 +62,6 @@ def mapRender():
 @app.errorhandler(404)
 def page_not_found(error):
 	return render_template('404.html'),404
-
-
-
 
 
 if __name__ == "__main__":
